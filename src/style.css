@@ -1,0 +1,219 @@
+/*css reset*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*style*/
+body {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    background-attachment: fixed;
+}
+
+@media (min-width: 500px) {
+    .searchForm {
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+        /*有最大宽度或者宽度固定时*/
+    }
+}
+
+.siteHeader {
+    margin: 20px;
+}
+
+@media (min-width: 500px) {
+    .siteHeader {
+        margin: 60px 0 80px;
+    }
+}
+
+.siteLogo{
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 500px) {
+    .siteLogo{
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.siteLogoWrapper{
+    justify-content: center;
+}
+
+.siteMain {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 500px) {
+    .siteMain {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.searchForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchForm > input {
+    width: 100%;
+    margin-right: 10px;
+    height: 40px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.searchForm > button {
+    white-space: nowrap;
+    padding: 0 28px;
+    border: none;
+    border-radius: 4px;
+    background-color: #bac8e0;
+    color: #fff;
+    font-size: 14px;
+}
+
+.siteList {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (min-width: 500px) {
+    .siteList {
+        margin-left: 0;
+        margin-right: -25px;
+        justify-content: flex-start;
+    }
+}
+
+.siteList > li {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 500px) {
+    .siteList > li {
+        margin-right: 20px;
+    }
+}
+
+.siteList .site {
+    position: relative;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.1);
+    /*border: 1px solid #dddddd;*/
+    border-radius: 5px;
+    padding: 15px 0;
+    cursor: pointer;
+    color: white;
+}
+
+.siteList .site > .logo {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+}
+
+.siteList .site > .link {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.siteList .site > .close {
+    position: absolute;
+    display: none;
+    right: 8px;
+    top: 5px;
+    cursor: default;
+}
+
+@media (any-hover: hover) {
+    .siteList .site:hover > .close {
+        display: block;
+    }
+    .searchForm > button:hover{
+        background-color: #a7a6cb;
+    }
+}
+
+.siteList .addButton {
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0;
+    /*border: 1px solid #dddddd;*/
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: white;
+}
+
+.icons {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.siteLogo > .icons{
+    width: 8em;
+    height: 8em;
+}
+
+.siteList .addButton .icons {
+    width: 60px;
+    height: 60px;
+}
+
+.siteList .addButton .icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.siteList .addButton .text {
+    font-size: 14px;
+    margin-top: 5px;
+}
